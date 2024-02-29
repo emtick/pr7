@@ -58,7 +58,7 @@
         android:text="@string/text"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent"
@@ -73,22 +73,22 @@
         android:text="@string/time"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
         app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_more_vert_24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_more_vert_24" />
-
+        android:layout_marginBottom="16px"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/description_post_menu" />
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -96,7 +96,7 @@
         android:text="бтпит бтпит бтпит бтпит бтпит бтпит бтпит  бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит бтпит https://btpit36.ru/ "
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -137,4 +137,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:srcCompat="@drawable/baseline_link_24" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/header"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="imageView, textView, textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/footer"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>
